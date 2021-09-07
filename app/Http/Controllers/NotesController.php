@@ -167,9 +167,9 @@ use Illuminate\Http\Request;
   /**
  * @OA\Delete(
  * path="/api/v1/notes/{id}",
- * summary="Edit note",
- * description="edit a note of user by id",
- * operationId="editNote",
+ * summary="delete note",
+ * description="delete a note of user by id",
+ * operationId="deleteNote",
  * tags={"notes"},
  * security={ {"sanctum": {} }},
  * @OA\Parameter(

@@ -241,7 +241,7 @@
                 "description": "pagination to get notes of user",
                 "operationId": "getNotes",
                 "requestBody": {
-                    "description": "pass params page=pagenumber",
+                    "description": "pass params page = pagenumber example:- http://localhost/api/v1/notes?page=1",
                     "required": true,
                     "content": {
                         "application/json": {
@@ -508,9 +508,9 @@
                 "tags": [
                     "notes"
                 ],
-                "summary": "Edit note",
-                "description": "edit a note of user by id",
-                "operationId": "editNote",
+                "summary": "delete note",
+                "description": "delete a note of user by id",
+                "operationId": "deleteNote",
                 "parameters": [
                     {
                         "name": "id",
