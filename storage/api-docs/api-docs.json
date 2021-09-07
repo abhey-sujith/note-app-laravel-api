@@ -232,7 +232,7 @@
                 ]
             }
         },
-        "/api/v1/notes": {
+        "/api/v1/notes?page={pagenumber}": {
             "get": {
                 "tags": [
                     "notes"
@@ -240,15 +240,19 @@
                 "summary": "get notes for user",
                 "description": "pagination to get notes of user",
                 "operationId": "getNotes",
-                "requestBody": {
-                    "description": "pass params page = pagenumber example:- http://localhost/api/v1/notes?page=1",
-                    "required": true,
-                    "content": {
-                        "application/json": {
-                            "schema": {}
-                        }
+                "parameters": [
+                    {
+                        "name": "pagenumber",
+                        "in": "path",
+                        "description": "ID of note",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        },
+                        "example": "1"
                     }
-                },
+                ],
                 "responses": {
                     "200": {
                         "description": "Success",
@@ -318,7 +322,9 @@
                         "sanctum": []
                     }
                 ]
-            },
+            }
+        },
+        "/api/v1/notes": {
             "post": {
                 "tags": [
                     "notes"

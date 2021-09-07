@@ -12,17 +12,22 @@ use Illuminate\Http\Request;
 
  /**
  * @OA\Get(
- * path="/api/v1/notes",
+ * path="/api/v1/notes?page={pagenumber}",
  * summary="get notes for user",
  * description="pagination to get notes of user",
  * operationId="getNotes",
  * tags={"notes"},
  * security={ {"sanctum": {} }},
- * @OA\RequestBody(
+ * @OA\Parameter(
+ *    description="ID of note",
+ *    in="path",
+ *    name="pagenumber",
  *    required=true,
- *    description="pass params page = pagenumber example:- http://localhost/api/v1/notes?page=1",
- *    @OA\JsonContent(
- *    ),
+ *    example="1",
+ *    @OA\Schema(
+ *       type="integer",
+ *       format="int64"
+ *    )
  * ),
  *    @OA\Response(
  *     response=200,
