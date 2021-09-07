@@ -251,6 +251,10 @@ class NotesController extends Controller
      */
     public function destroy(Request $request,$id)
     {
+        $note = Notes::where('id', '=',$id)->where('user_id', '=',$request->user()->id)->get();
+         if($note->isEmpty()){
+         return response(['message' => 'note not found'], 400);
+         }
         $note = Notes::where('id', '=',$id)->where('user_id', '=',$request->user()->id);
         $note->delete();
         return response(['message' => 'The note has been deleted'], 200);
