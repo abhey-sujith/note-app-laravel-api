@@ -37,9 +37,22 @@ use Illuminate\Support\Facades\Hash;
  *  ),
  * @OA\Response(
  *    response=422,
- *    description="Unprocessable Entity",
+ *    description="Validation Error",
  *    @OA\JsonContent(
- *       @OA\Property(property="message", type="string", example="The given data was invalid.")
+ *    @OA\Property(property="message", type="string", example="The given data was invalid."),
+ *        @OA\Property(
+ *           property="errors",
+ *           type="object",
+ *           @OA\Property(
+ *              property="email",
+ *              type="array",
+ *              collectionFormat="multi",
+ *              @OA\Items(
+ *                 type="string",
+ *                 example={"The email field is required.","The email must be a valid email address."},
+ *              )
+ *           )
+ *        )
  *        )
  *     )
  * )
@@ -77,6 +90,7 @@ use Illuminate\Support\Facades\Hash;
  *        )
  *     )
  * )
+ * 
  */
 
   /**
@@ -102,6 +116,7 @@ use Illuminate\Support\Facades\Hash;
  *        )
  *     )
  * )
+ * 
  */
 
 
