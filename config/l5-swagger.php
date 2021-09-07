@@ -178,6 +178,12 @@ return [
                     ],
                 ],
                 */
+                'sanctum' => [
+                    'type' => 'http',
+                    'description' => 'Laravel Sanctum token authentication',
+                    'scheme' => 'bearer',
+                    'bearerFormat' => 'JWT'
+                ],
             ],
             'security' => [
                 /*
