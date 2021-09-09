@@ -78,7 +78,7 @@ To get a local copy up and running follow these simple steps.
  
  ### Swagger Link
  
- <img src="./swagger.png" width="600">
+ <img src="./swaggerapi.png" width="600">
  
  Swagger deployed link
  
