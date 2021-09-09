@@ -121,6 +121,10 @@ React Native :- [https://github.com/abhey-sujith/note-app-react-native](https://
 ✅ Create note
 ✅ Edit note
 ✅ Delete note
+✅ Add swagger
+✅ Deploy to Heroku
+✅ Setup postgre server in heroku
+✅ Test with postman
 
 Improvements
 
