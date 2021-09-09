@@ -80,7 +80,10 @@ To get a local copy up and running follow these simple steps.
  
  <img src="./swagger.png" width="600">
  
+ Swagger deployed link
+ 
 Live :- [https://note-app-laravel-api.herokuapp.com/api/documentation](https://note-app-laravel-api.herokuapp.com/api/documentation)
+
 Localhost :- [http://localhost/api/documentation](http://localhost/api/documentation)
 
 
