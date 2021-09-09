@@ -41,6 +41,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+ <img src="./Overview.png" width="600">
+ 
 A simple project which consists of backend API for a note app.
 
 
