@@ -24,7 +24,7 @@ Route::prefix('v1')->group(function () {
 
 
 
-
+//protected Route
 Route::middleware('auth:sanctum')->prefix('v1')->group(function(){
     Route::post('/logout', [AuthController::class,'logout']);
 
